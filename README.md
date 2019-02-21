@@ -1,5 +1,5 @@
 # Wunderground Data Scraping
-I am using selenium to automate the process of scraping. Selenium, allows Python to run a headless browser.
+I am using selenium to automate the process of scraping. Selenium allows Python to run a headless browser.
 
 
 Installation of Selenium:
