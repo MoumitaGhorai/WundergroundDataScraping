@@ -17,7 +17,7 @@ print(study_period)
 
 
 collected_temperature_data = [] #temp data will be save in this 
-stations = ['STATION1', 'STATION2'] #save the names of the stations inside this file
+stations = ['STATION1'] #save the names of the stations inside this file
 
 
 
