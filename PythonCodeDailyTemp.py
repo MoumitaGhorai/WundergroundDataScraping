@@ -8,8 +8,8 @@ study_period = []
  def add_day_to_month(year,month,day):
     this_period = "2018" +"-"+ str(month)+ "-" + str(day)
     study_period.append(this_period)
-for month in range(1,2):
-    for day in range(1,5):
+for month in range(1,13):
+    for day in range(1,32):
         add_day_to_month("2018",month,day)
 print(study_period)
 
