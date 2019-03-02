@@ -13,7 +13,7 @@ for month in range(1,13):
         add_day_to_month("2018",month,day)
 print(study_period)
 #remove the impossible dates
-indexes = [59,60,61,123,185,278, 340,]
+indexes = [59,60,61,123,185,278, 340]
 for index in sorted(indexes, reverse=True):
     del study_period[index]
     
