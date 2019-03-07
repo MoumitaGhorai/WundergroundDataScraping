@@ -23,25 +23,23 @@ for index in sorted(indexes, reverse=True):
 collected_temperature_data = [] #temp data will be save in this 
 stations = ['STATION1'] #save the names of the stations inside this file
 
-
-
-
-#extract the data
 for station in stations:
-  for time in study_period:
-    driver.get("https://www.wunderground.com/history/monthly/us/{}/{}/" + station + "/date/"+time)
+ for time in study_period:
+    driver.get("https://www.wunderground.com/history/daily/us/mi/kalamazoo/" + station+ "/date/" + time)
     elem = driver.find_element_by_class_name("summary-table") 
     data = elem.text
     data_lines = data.split("\n")
-    print(data)
-for line in data_lines:
+    print(data_lines)
+    
+    for line in data_lines:
         data_lines = line.split(" ")
         if data_lines[0] == "High":
-            sep = ","
             data_title = " ".join(data_lines[:2])
+            sep = ","
             temp_data = sep.join(data_lines[2:])
             line_data = time+sep+data_title+sep+temp_data                
             collected_temperature_data.append(line_data)
+
             print(collected_temperature_data)
 
           
